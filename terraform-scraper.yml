@@ -15,6 +15,7 @@ spec:
     insecureTLS: true
     bucket: example-bucket-terraform
     region: us-east-1
+    usePathStyle: true
 ---
 apiVersion: configs.flanksource.com/v1
 kind: ScrapeConfig
