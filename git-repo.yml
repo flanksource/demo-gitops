@@ -1,0 +1,24 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: demo-gitops
+  namespace: flux-system
+spec:
+  interval: 1m
+  ref:
+    branch: main
+  timeout: 60s
+  url: https://github.com/flanksource/demo-gitops.git
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: demo-gitops
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: demo-gitops
