@@ -5,3 +5,4 @@ resources:
   - helm-repository.yml
   - flux-registry.yml
   - argocd-registry.yml
+  - argo-sock-shop.yml
