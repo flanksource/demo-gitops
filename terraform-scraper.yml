@@ -6,7 +6,8 @@ metadata:
   namespace: default
 spec:
   s3:
-    url: http://localstack-localstack.localstack:4566
+    url:
+      value: http://localstack-localstack.localstack:4566
     accessKey:
       value: test
     secretKey:
