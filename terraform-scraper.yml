@@ -1,0 +1,31 @@
+---
+apiVersion: mission-control.flanksource.com/v1
+kind: Connection
+metadata:
+  name: aws-localstack
+  namespace: default
+spec:
+  s3:
+    url: http://localstack-localstack.localstack:4566
+    accessKey:
+      value: test
+    secretKey:
+      value: test
+    insecureTLS: true
+    bucket: example-bucket-terraform
+    region: us-east-1
+---
+apiVersion: configs.flanksource.com/v1
+kind: ScrapeConfig
+metadata:
+  name: terraform
+  namespace: default
+spec:
+  schedule: '@every 5m'
+  terraform:
+    - name: aws-localstack
+      state:
+        s3:
+          bucket: example-bucket-terraform
+          connection: connection://aws-localstack
+          objectPath: 'terraform.tfstate'

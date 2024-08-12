@@ -6,3 +6,4 @@ resources:
   - flux-registry.yml
   - argocd-registry.yml
   - argo-sock-shop.yml
+  - terraform-scraper.yml
