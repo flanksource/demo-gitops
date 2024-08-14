@@ -37,3 +37,5 @@ kubelet:
 ## Deploy node exporter as a daemonset to all nodes
 nodeExporter:
   enabled: true
+  service:
+    port: 9200
