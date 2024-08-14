@@ -42,12 +42,12 @@ prometheus:
   # Enable this can make Thanos Query can use
   # `--store=dnssrv+_grpc._tcp.${kube-prometheus-stack.fullname}-thanos-discovery.${namespace}.svc.cluster.local` to discovery
   thanosService:
-    enabled: true
+    enabled: false
 
   # ServiceMonitor to scrape Sidecar metrics
   # Needs thanosService to be enabled as well
   thanosServiceMonitor:
-    enabled: true
+    enabled: false
 
   # Service for external access to sidecar
   # Enabling this creates a service to expose thanos-sidecar outside the cluster.
@@ -66,7 +66,6 @@ prometheus:
     storageSpec:
       volumeClaimTemplate:
         spec:
-          storageClassName: managed
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
