@@ -1,5 +1,6 @@
 namespace: monitoring
 resources:
+  - namespace.yml
   - helm-release.yaml
 
 configMapGenerator:
