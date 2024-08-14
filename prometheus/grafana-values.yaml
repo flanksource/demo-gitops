@@ -1,0 +1,36 @@
+## Using values from https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
+grafana:
+  enabled: true
+
+  grafana.ini:
+    log:
+      filters: oauth.generic_oauth:debug
+#    server:
+#      root_url: 
+#    auth.generic_oauth:
+#      enabled: True
+#      allow_sign_up: True
+#      client_id: "${AZURE_CLIENT_ID}"
+#      client_secret: "${AZURE_CLIENT_SECRET}"
+#      scopes: "openid email  profile"
+#      auth_url: 
+#      token_url: 
+#      role_attribute_strict: False
+#      role_attribute_path:  
+
+  useStatefulSet: true
+  persistence:
+    enabled: true
+    accessModes:
+      - ReadWriteOnce
+    storageClassName: managed
+    size: 10Gi
+    type: StatefulSet
+
+  envFromSecrets:
+    - name: grafana-secret
+      # TODO: Can put password here
+      optional: true
+  envFromConfigMaps:
+    - name: grafana-env
+      optional: true

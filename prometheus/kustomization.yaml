@@ -1,0 +1,15 @@
+namespace: monitoring
+resources:
+  - helm-release.yaml
+
+configMapGenerator:
+- name: prometheus-stack-values
+  files:
+  - prometheus-stack-values.yaml
+  - control-plane-values.yaml
+  - alertmanager-values.yaml
+  - grafana-values.yaml
+  - operator-values.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
