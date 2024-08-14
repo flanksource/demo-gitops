@@ -23,7 +23,6 @@ grafana:
     enabled: true
     accessModes:
       - ReadWriteOnce
-    storageClassName: managed
     size: 10Gi
     type: StatefulSet
 
