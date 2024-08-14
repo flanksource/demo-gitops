@@ -7,3 +7,4 @@ resources:
   - argocd-registry.yml
   - argo-sock-shop.yml
   - terraform-scraper.yml
+  - prometheus

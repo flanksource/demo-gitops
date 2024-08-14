@@ -1,0 +1,9 @@
+alertmanager:
+  enabled: true
+
+  alertmanagerSpec:
+    podMetadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+    replicas: 1
+    retention: 120h

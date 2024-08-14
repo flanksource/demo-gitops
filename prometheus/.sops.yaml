@@ -1,0 +1,4 @@
+creation_rules:
+  - key_groups:
+      - kms:
+          - arn: "arn:aws:kms:eu-west-1:765618022540:key/7f9dd1c2-1957-4ae8-82b0-f5a9efb246a2"

@@ -1,0 +1,18 @@
+## Manages Prometheus and Alertmanager components
+prometheusOperator:
+  enabled: true
+
+  admissionWebhooks:
+    certManager:
+      enabled: true
+  resources:
+    limits:
+      cpu: 2000
+      memory: 1532Mi
+    requests:
+      cpu: 100m
+      memory: 512Mi
+
+  # Required for use in managed kubernetes clusters (such as AWS EKS) with custom CNI (such as calico),
+  # because control-plane managed by AWS cannot communicate with pods' IP CIDR and admission webhooks are not working
+  hostNetwork: false
