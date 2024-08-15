@@ -16,4 +16,5 @@ spec:
   interval: 5m
   values:
     prometheus:
-      url: http://kube-prometheus-stack-prometheus.monitoring:9090
+      url:
+        value: http://kube-prometheus-stack-prometheus.monitoring:9090
