@@ -10,3 +10,4 @@ resources:
   - argo-sock-shop.yml
   - terraform-scraper.yml
   - prometheus
+  - prometheus-registry.yml
