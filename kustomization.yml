@@ -3,6 +3,8 @@ kind: Kustomization
 buildMetadata: [originAnnotations]
 resources:
   - helm-repository.yml
+  - watchtower-registry.yml
+  - kubernetes-registry.yml
   - flux-registry.yml
   - argocd-registry.yml
   - argo-sock-shop.yml
