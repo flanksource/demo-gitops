@@ -1,0 +1,18 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: mission-control-prometheus
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: mission-control-prometheus
+      interval: 1m
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: flanksource
+        namespace: default
+  interval: 5m
+  values:
+    prometheusURL: http://kube-prometheus-stack-prometheus.monitoring:9090
