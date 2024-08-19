@@ -11,3 +11,4 @@ resources:
   - terraform-scraper.yml
   - prometheus
   - prometheus-registry.yml
+  - external-canaries
