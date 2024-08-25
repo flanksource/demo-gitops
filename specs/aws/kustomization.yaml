@@ -3,3 +3,4 @@ kind: Kustomization
 buildMetadata: [originAnnotations]
 resources:
   - podinfo1
+  - podinfo1
