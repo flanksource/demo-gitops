@@ -1,0 +1,8 @@
+apiVersion: v
+kind: Namespace
+metadata:
+  name: podinfo1
+  annotations:
+    "mission-control/playbook": provision-namespace-gitops
+    "mission-control/run": 0191890f-22aa-c88f-1dba-6b73042d21d1
+    "mission-control/createdBy": System
