@@ -4,5 +4,5 @@ metadata:
   name: podinfo1
   annotations:
     "mission-control/playbook": provision-namespace-gitops
-    "mission-control/run": 01918919-508c-3f4e-7ec4-4c729603cb56
+    "mission-control/run": 01918938-892f-2859-f53d-25a197d95683
     "mission-control/createdBy": System
