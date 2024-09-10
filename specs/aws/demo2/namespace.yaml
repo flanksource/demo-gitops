@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo2
+  annotations:
+    "mission-control/playbook": kustomize-create-namespace
+    "mission-control/run": 0191dc48-5b85-b411-18b9-afad55e49843
+    "mission-control/createdBy": Admin
