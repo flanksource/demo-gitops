@@ -5,5 +5,5 @@ metadata:
   name: flanksource
   namespace: default
 spec:
-  interval: 1m
+  interval: 5m
   url: http://flanksource.github.io/charts
