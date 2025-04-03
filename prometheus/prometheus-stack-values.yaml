@@ -85,3 +85,11 @@ prometheus:
 ## ref: https://thanos.io/tip/components/rule.md/
 thanosRuler:
   enabled: false
+
+prometheus-node-exporter:
+  service:
+    port: 9101
+    targetPort: 9101
+
+  extraArgs:
+    - --web.listen-address=:9101
