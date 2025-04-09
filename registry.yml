@@ -40,7 +40,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: mission-control-watchtower
-  namespace: default
+  namespace: mission-control
 spec:
   chart:
     spec:
