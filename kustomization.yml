@@ -7,4 +7,5 @@ resources:
   - terraform-scraper.yml
   - prometheus
   - registry.yml
+  - playbooks.yml
   #- external-canaries
