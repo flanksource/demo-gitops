@@ -4,6 +4,7 @@ metadata:
   name: log-component-status
   namespace: default
 spec:
+  title: Post pod status to HTTP Endpoint
   description: Post kubernetes pod component name and status to httpbin
   components:
     - types: 
