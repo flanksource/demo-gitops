@@ -4,14 +4,14 @@ metadata:
   name: log-component-status
   namespace: default
 spec:
-  description: Post kubernetes namespace component name and status to webhook
+  description: Post kubernetes pod component name and status to httpbin
   components:
     - types: 
-      - Kubernetes::Namespace
+      - Kubernetes::Pod
   actions:
-    - name: Post a message to webhook
+    - name: Post data to httpbin
       http:
-        url: https://webhook.site/9f1392a6-718a-4ef5-a8e2-bfb55b08afca
+        url: https://httpbin.demo.aws.flanksource.com/post
         method: POST
         body: |
           {
@@ -22,8 +22,6 @@ spec:
           }
         templateBody: true
         headers:
-          - name: X-Postgres-User
-            value: admin@local
-          - name: X-Flanksource-Token
-            value: secret123
+          - name: Content-Type
+            value: application/json 
 
