@@ -66,7 +66,7 @@ prometheus:
     storageSpec:
       volumeClaimTemplate:
         spec:
-          accessModes: ["ReadWriteOnce"]
+          accessModes: ['ReadWriteOnce']
           resources:
             requests:
               storage: 20Gi
@@ -80,7 +80,6 @@ prometheus:
   additionalServiceMonitors: []
   additionalPodMonitors: []
 
-
 ## Configuration for thanosRuler
 ## ref: https://thanos.io/tip/components/rule.md/
 thanosRuler:
@@ -90,6 +89,3 @@ prometheus-node-exporter:
   service:
     port: 9101
     targetPort: 9101
-
-  extraArgs:
-    - --web.listen-address=:9101
